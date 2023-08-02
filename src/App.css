@@ -1,35 +1,64 @@
-* {
-    background-image: url('https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg?w=2000');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    color: whitesmoke;
-    justify-content: center;
+#root, html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
-#advice {
+.app {
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTV8fGJhY2tncm91bmQlMjBpbWFnZXxlbnwwfHx8fDE2OTA5MTAzNzh8MA&ixlib=rb-4.0.3);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card {
     background: rgba(255, 255, 255, 0);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.18);
-    font-size: medium;
-    font-style: normal;
+    width: 40%;
+    height: 30%;
     padding: 20px;
-    width: 500px;
-    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heading {
     display: flex;
     align-items: center;
-    justify-content: center;
-    align-content: center;
+    height: 580px;
     user-select: none;
 }
 
-#root {
+.button {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 30px;
     display: flex;
-    align-content: center;
     justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 200px;
+    width: 150px;
+    opacity: 1;
+    background-color: white;
+    border: 1px solid brown;
+}
 
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 80%;
+        height: 30%;
+    }
 }
